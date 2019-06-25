@@ -1,0 +1,9 @@
+{
+    "description": "Configuration for hope",
+    "visual_studio_name": "hope",
+    "comment" : "",
+    "game_projects" : "hope",
+
+    "modules" : [
+    ]
+}

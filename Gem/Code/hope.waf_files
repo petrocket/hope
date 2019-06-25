@@ -1,0 +1,12 @@
+{
+    "auto": {
+        "Include": [
+            "Include/hope/hopeBus.h"
+        ],
+        "Source": [
+            "Source/hopeModule.cpp",
+            "Source/hopeSystemComponent.cpp",
+            "Source/hopeSystemComponent.h"
+        ]
+    }
+}
