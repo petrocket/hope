@@ -1,7 +1,13 @@
 local PlayerController = {
 	Properties = {
 		MoveSpeed = { default = 10.0, suffix = "m/s" },
+		AirMoveSpeed = {default = 1.0, suffix = "m/s"},
 		MoveSpeedModifier = { default = 10.0 },
+		MaxMoveSpeed = { default = 300, suffix = "m/s"},
+		JumpDelay = {default = 0.5, suffix = "s"},
+		JumpAmount = {default = 100.0},
+		DistanceToGround = {default = 1.0, suffix = "m", description = "distance from center of object to ground"},
+		DoubleJump = {default = false},
 		RotationSpeed = { default = 0.2, suffix = "m/s" },
 		Epsilon = { default = 0.0001 },
 		SmoothFactor = { default = 0.5 },
@@ -14,6 +20,7 @@ local PlayerController = {
 		OnLookUpDown = {},
 		OnLookLeftRight = {},
 		OnSpeedModifier = {},
+		OnJump = {},
 	},
 }
 
@@ -21,6 +28,16 @@ function PlayerController:OnActivate()
 	self.moveDirection = Vector2(0,0)
 	self.lookDirection = Vector2(0,0)
 	self.moveModifier = 1
+	self.jumpAmount = 0
+	self.nextJumpTime = 0
+	self.maxVelocitySq = self.Properties.MaxMoveSpeed * self.Properties.MaxMoveSpeed
+	self.onGround = 0
+	self.rayCastConfig = RayCastConfiguration()
+	self.rayCastConfig.ignoreEntityIds = vector_EntityId()
+	self.rayCastConfig.ignoreEntityIds:PushBack(self.entityId)
+	self.rayCastConfig.direction = Vector3(0,0,-1) 
+	self.rayCastConfig.maxDistance = self.Properties.DistanceToGround
+	self.rayCastConfig.maxHits = 1
 	
 	self:BindInputEvents(self.InputEvents)
 	
@@ -31,20 +48,62 @@ function PlayerController:GetTickOrder()
 	return TickOrder.Default - 1
 end
 
+function PlayerController:UpdateOnGround(playerTM)
+	self.rayCastConfig.origin = playerTM:GetPosition()
+
+	self.onGround = 0
+	local result = PhysicsSystemRequestBus.Broadcast.RayCast(self.rayCastConfig)
+	if result ~= nil then
+		if result:GetHitCount() > 0 then
+			self.onGround = 1
+		end
+	end
+	--Debug.Log("onground " .. tostring(self.onGround))
+end
+
 function PlayerController:OnTick(deltaTime, scriptTime)
+	-- raycast ground check
+	local tm = TransformBus.Event.GetWorldTM(self.entityId)
+	self:UpdateOnGround(tm)
+
 	local moveSq = self.moveDirection:GetLengthSq()
 	if moveSq > self.Properties.Epsilon then
-		local tm = TransformBus.Event.GetWorldTM(self.entityId)
-		local move = Vector3(self.moveDirection.x ,self.moveDirection.y ,0)
-		move = move:GetNormalized() * self.Properties.MoveSpeed * self.moveModifier * deltaTime
-        --TransformBus.Event.MoveEntity(self.entityId, (tm.basisX * move.x) + (tm.basisY * move.y))
-        
-        RigidBodyRequestBus.Event.ApplyAngularImpulse(self.entityId, Vector3(self.moveDirection.y * self.Properties.MoveSpeed * deltaTime,self.moveDirection.x * self.Properties.MoveSpeed * deltaTime,0))
+		if self.Properties.Camera ~= nil and self.Properties.Camera:IsValid() then
+			local move = Vector3(self.moveDirection.x ,self.moveDirection.y ,0)
+			local moveSpeed = self.Properties.MoveSpeed
+			if self.onGround == 0 then
+				moveSpeed = self.Properties.AirMoveSpeed
+			end
+			move = move:GetNormalized() * moveSpeed * deltaTime
+			local cameraTM = TransformBus.Event.GetWorldTM(self.Properties.Camera)
+			local forward = cameraTM.basisY
+			forward.z = 0
+			local side = cameraTM.basisX
+			side.z = 0
+			local impulse = side:GetNormalized() * move.x
+			impulse = impulse + forward:GetNormalized() * move.y
+
+			RigidBodyRequestBus.Event.ApplyLinearImpulse(self.entityId, impulse)
+		end
 		
 		-- framerate dependent smoothing (TODO make independent of fps)
 		self.moveDirection.x = self.moveDirection.x * self.Properties.SmoothFactor
 		self.moveDirection.y = self.moveDirection.y * self.Properties.SmoothFactor
 	end	
+
+	if self.jumpAmount > 0 then
+		if self.onGround > 0 then
+			RigidBodyRequestBus.Event.ApplyLinearImpulse(self.entityId, Vector3(0,0,self.Properties.JumpAmount))
+		end
+		self.jumpAmount = 0
+	end
+
+	-- cap the max velocity if we go over
+	local velocity = RigidBodyRequestBus.Event.GetLinearVelocity(self.entityId)
+	if velocity:GetLengthSq() > self.maxVelocitySq then
+		local newVelocity = velocity:GetNormalized() * self.Properties.MaxMoveSpeed
+		RigidBodyRequestBus.Event.SetLinearVelocity(self.entityId, newVelocity)
+	end
 end
 
 function PlayerController:OnDeactivate()
@@ -129,6 +188,14 @@ end
 
 function PlayerController.InputEvents.OnSpeedModifier:OnReleased(value)
 	self.Component.moveModifier = 1.0
+end
+
+function PlayerController.InputEvents.OnJump:OnPressed(value)
+	local time = TickRequestBus.Broadcast.GetTimeAtCurrentTick()
+	if time:GetSeconds() > self.Component.nextJumpTime then
+		self.Component.nextJumpTime = time:GetSeconds() + self.Component.Properties.JumpDelay
+		self.Component.jumpAmount = 1.0
+	end
 end
 
 return PlayerController
