@@ -7,7 +7,9 @@ local CameraController = {
 		Player = EntityId(),
 		Bounds = EntityId(),
 		SmoothAmount = 0.1,
-		UpdateRate = { default=0.016, suffix = "s"}
+		UpdateRate = { default=0.016, suffix = "sec"},
+		DissolveCheckRate = { default = 0.1, suffix = "sec"},
+		DissolveTracker = EntityId()
 	}
 }
 
@@ -15,6 +17,17 @@ function CameraController:OnActivate()
 	Utilities:InitLogging(self, "CameraController")
 	self.entityListener = EntityBus.Connect(self, self.Properties.Player)
 	self.nextUpdateTime = 0
+	self.nextDissolveCheckTime = 0
+
+	self.rayCastConfig = RayCastConfiguration()
+	self.rayCastConfig.ignoreEntityIds = vector_EntityId()
+	self.rayCastConfig.ignoreEntityIds:PushBack(self.entityId)
+	self.rayCastConfig.ignoreEntityIds:PushBack(self.Properties.Player)
+	self.rayCastConfig.ignoreEntityIds:PushBack(self.Properties.Bounds)
+	self.rayCastConfig.direction = Vector3(0,0,1) 
+	self.rayCastConfig.maxDistance = 1.0
+	self.rayCastConfig.maxHits = 1
+	self.lastHitEntity = nil
 end
 
 function CameraController:GetTickOrder()
@@ -47,6 +60,59 @@ function CameraController:OnTick(deltaTime, scriptTime)
 			TransformBus.Event.SetWorldTranslation(self.entityId, position + moveAmount)
 		end
 	end
+
+	if scriptTime:GetSeconds() > self.nextDissolveCheckTime then
+		self.nextDissolveCheckTime = scriptTime:GetSeconds() + self.Properties.DissolveCheckRate
+
+		local position = TransformBus.Event.GetWorldTranslation(self.entityId)
+		local playerPosition = TransformBus.Event.GetWorldTranslation(self.Properties.Player)
+
+		self.rayCastConfig.origin = position 
+		local direction = playerPosition - position;
+		self.rayCastConfig.maxDistance = direction:GetLength() - 0.2
+		self.rayCastConfig.direction =  direction:GetNormalized()
+		local result = PhysicsSystemRequestBus.Broadcast.RayCast(self.rayCastConfig)
+		if result ~= nil then
+			local previousEntity =  self.lastHitEntity
+			if result:GetHitCount() > 0 then
+				local hit = result:GetHit(1)
+				TransformBus.Event.SetWorldTranslation(self.Properties.DissolveTracker, hit.position)
+				if hit ~= nil and hit.entityId ~= nil and hit.entityId:IsValid() then
+					if hit.entityId ~= self.lastHitEntity then
+						-- hit a different entity
+						local material = MaterialOwnerRequestBus.Event.GetMaterial(hit.entityId)
+						if material then
+							material:SetParamNumber("DissolvePercentage", 0.5)
+						end
+						self:Log("dissolving entity " .. tostring(hit.entityId))
+						self.lastHitEntity = hit.entityId
+					else
+						self:Log("hit same entity")
+					end
+				elseif hit ~= nil  then
+					-- didn't hit an entity 
+					self.lastHitEntity = nil
+					self:Log("hit non-entity")
+				else
+					-- didn't hit an entity 
+					self.lastHitEntity = nil
+					self:Log("no hit")
+				end
+			else
+				self.lastHitEntity = nil
+				TransformBus.Event.SetWorldTranslation(self.Properties.DissolveTracker, Vector3(0,0,0))
+			end 
+
+			if previousEntity ~= nil and previousEntity ~= self.lastHitEntity then
+				self:Log("restoring previous dissolved entity")
+				local material = MaterialOwnerRequestBus.Event.GetMaterial(previousEntity)
+				if material then
+					material:SetParamNumber("DissolvePercentage", 0)
+				end
+			end
+		end
+	end
+
 end
 
 function CameraController:OnTransformChanged(localTM, worldTM)
@@ -58,17 +124,19 @@ function CameraController:OnTransformChanged(localTM, worldTM)
 end
 
 function CameraController:GetDestinationCameraPosition(currentPosition, playerPosition)
-	local inside = ShapeComponentRequestsBus.Event.IsPointInside(self.Properties.Bounds, playerPosition)
-	if inside then
-		return currentPosition
-	else
-		local distance =  ShapeComponentRequestsBus.Event.DistanceFromPoint(self.Properties.Bounds, playerPosition)
-		local boundsCenter = TransformBus.Event.GetWorldTranslation(self.Properties.Bounds)
-		local direction = playerPosition - boundsCenter
-		direction.z = 0
-		direction = direction:GetNormalized()
-		--self:Log("Direction " .. tostring(direction))
-		return currentPosition + (direction * distance)
+	if playerPosition ~= nil then
+		local inside = ShapeComponentRequestsBus.Event.IsPointInside(self.Properties.Bounds, playerPosition)
+		if inside then
+			return currentPosition
+		else
+			local distance =  ShapeComponentRequestsBus.Event.DistanceFromPoint(self.Properties.Bounds, playerPosition)
+			local boundsCenter = TransformBus.Event.GetWorldTranslation(self.Properties.Bounds)
+			local direction = playerPosition - boundsCenter
+			direction.z = 0
+			direction = direction:GetNormalized()
+			--self:Log("Direction " .. tostring(direction))
+			return currentPosition + (direction * distance)
+		end
 	end
 	return currentPosition
 end

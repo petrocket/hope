@@ -10,7 +10,7 @@
 			<Class name="bool" field="PvdReconnect" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
 			<Class name="ColliderProximityVisualization" field="ColliderProximityVisualization" version="1" type="{2A9BA0AE-C6A7-4F87-B7F0-D62444035478}">
 				<Class name="bool" field="Enabled" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
-				<Class name="Vector3" field="CameraPosition" value="491.0801392 524.3610840 57.8402710" type="{8379EB7D-01FA-4538-B64B-A6543B4BE73D}"/>
+				<Class name="Vector3" field="CameraPosition" value="690.5300903 395.5368042 41.1917152" type="{8379EB7D-01FA-4538-B64B-A6543B4BE73D}"/>
 				<Class name="float" field="Radius" value="17.5000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
 			</Class>
 		</Class>
@@ -21,7 +21,7 @@
 			</Class>
 			<Class name="float" field="MaxTimeStep" value="0.0500000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
 			<Class name="float" field="FixedTimeStep" value="0.0166667" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
-			<Class name="Vector3" field="Gravity" value="0.0000000 0.0000000 -32.0000000" type="{8379EB7D-01FA-4538-B64B-A6543B4BE73D}"/>
+			<Class name="Vector3" field="Gravity" value="0.0000000 0.0000000 -40.0000000" type="{8379EB7D-01FA-4538-B64B-A6543B4BE73D}"/>
 			<Class name="AZ::u64" field="RaycastBufferSize" value="32" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
 			<Class name="AZ::u64" field="SweepBufferSize" value="32" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
 			<Class name="AZ::u64" field="OverlapBufferSize" value="32" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>

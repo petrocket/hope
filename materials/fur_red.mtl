@@ -1,4 +1,4 @@
-<Material MtlFlags="557056" DccMaterialHash="0" Shader="Fur" GenMask="2200010000000300" StringGenMask="%CUSTOM_MODIFICATOR%DEPTH_FIXUP%FUR_LENGTH_SCALED%NORMAL_MAP%ZPASS_CUSTOM_DIFFUSE" SurfaceType="mat_default" Diffuse="0.52099562,0.054480281,0.038204376,1" Specular="0.045000002,0.045000002,0.045000002,1" Opacity="1" Shininess="10" vertModifType="0" LayerAct="1">
+<Material MtlFlags="134774784" DccMaterialHash="0" Shader="Fur" GenMask="3200010000000300" StringGenMask="%CUSTOM_MODIFICATOR%DEPTH_FIXUP%FUR_BLENDCOLOR%FUR_LENGTH_SCALED%NORMAL_MAP%ZPASS_CUSTOM_DIFFUSE" SurfaceType="mat_default" Diffuse="0.52099562,0.02842604,0.023153368,1" Specular="0.070360102,0.021219011,0.011612247,1" Opacity="1" Shininess="10" vertModifType="1" LayerAct="1">
  <Textures>
   <Texture Map="Diffuse" File="textures/fur/fur_noise1.dds">
    <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
@@ -6,5 +6,8 @@
   <Texture Map="Custom" File="textures/fur/fur_noise1.dds"/>
   <Texture Map="Bumpmap" File="engineassets/textures/perlinnoisenormal_ddn.dds"/>
  </Textures>
- <PublicParams FurFinAlphaTest="1" FurStiffness="0.059999999" SSSFalloff="1" FurLengthCM="100" FurMaxGravity="4.7199998" DepthFixupThreshold="0.050000001" SSSStrength="1" IndirectColor="0.25,0.25,0.25"/>
+ <VertexDeform Type="1" DividerX="10" NoiseScale="1,1,1">
+  <WaveX Type="1" Amp="0.050000001" Level="0.1" Phase="0" Freq="0.5"/>
+ </VertexDeform>
+ <PublicParams FurFinAlphaTest="1" FurStiffness="0.059999999" SSSFalloff="1" FurSelfShadowBias="1.34" FurLengthCM="100" FurMaxGravity="4.7199998" DepthFixupThreshold="0.050000001" SSSStrength="1" FurSelfShadowColor="0.038204376,0.0047769537,0.0047769537" IndirectColor="0.25,0.25,0.25"/>
 </Material>

@@ -1,8 +1,8 @@
-<Material MtlFlags="524320" DccMaterialHash="0" Shader="Illum" GenMask="802000000003" StringGenMask="%ALLOW_SILHOUETTE_POM%ALLOW_SPECULAR_ANTIALIASING%SUBSURFACE_SCATTERING%VERTCOLORS" SurfaceType="mat_default" Diffuse="1,1,1,1" Specular="0.045000002,0.045000002,0.045000002,0.039215688" Emittance="1,0.1470273,0.029556841,200" Opacity="1" Shininess="10" vertModifType="12" LayerAct="1">
+<Material MtlFlags="524322" DccMaterialHash="0" Shader="Illum" GenMask="802000000003" StringGenMask="%ALLOW_SILHOUETTE_POM%ALLOW_SPECULAR_ANTIALIASING%SUBSURFACE_SCATTERING%VERTCOLORS" SurfaceType="mat_default" Diffuse="1,1,1,1" Specular="0.045000002,0.045000002,0.045000002,1" Emittance="1,0.32314324,0.054480281,50" Opacity="1" Shininess="10" vertModifType="12" LayerAct="1">
  <Textures>
-  <Texture Map="Diffuse" File="engineassets/textures/grey.dds"/>
+  <Texture Map="Diffuse" File="textures/defaults/grey.dds"/>
  </Textures>
- <VertexDeform Type="12" DividerX="1" NoiseScale="1,1,1">
+ <VertexDeform Type="12" DividerX="0.0099999998" NoiseScale="1,1,1">
   <WaveX Type="1" Amp="0" Level="0.001" Phase="0" Freq="0"/>
  </VertexDeform>
  <PublicParams EmittanceMapGamma="1" SSSIndex="0" IndirectColor="0.25,0.25,0.25"/>

@@ -3,7 +3,8 @@ return {
 	OnAttack = "OnAttack",
 	OnLeftRight = "OnLeftRight",
 	OnUpDown ="OnUpDown",
-	
+
+	OnDissolve = "OnDissolve",
 	OnDamage = "OnDamage",
 	OnDestroyed = "OnDestroyed",
 	OnHealthChanged = "OnHealthChanged",

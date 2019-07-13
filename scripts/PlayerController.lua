@@ -1,5 +1,8 @@
+local Utilities = require "scripts/ToolKit/utilities"
+local Events = require "scripts/ToolKit/events"
 local PlayerController = {
 	Properties = {
+		Debug = false,
 		MoveSpeed = { default = 10.0, suffix = "m/s" },
 		AirMoveSpeed = {default = 1.0, suffix = "m/s"},
 		MoveSpeedModifier = { default = 10.0 },
@@ -12,7 +15,13 @@ local PlayerController = {
 		Epsilon = { default = 0.0001 },
 		SmoothFactor = { default = 0.5 },
         Enabled = true,
-        Camera = { default = EntityId()}
+		Camera = { default = EntityId()},
+		Audio = 
+		{
+			Jump = "Play_jump",
+			Land = "Play_ground_hit02"
+		},
+		Collider = EntityId()
 	},
 	InputEvents = {
 		OnMoveForwardBack = {},
@@ -22,9 +31,15 @@ local PlayerController = {
 		OnSpeedModifier = {},
 		OnJump = {},
 	},
+	Events = {
+		[Events.OnSetEnabled] = {},
+	},
 }
 
 function PlayerController:OnActivate()
+	Utilities:InitLogging(self, "PlayerController")
+	Utilities:BindEvents(self, self.Events)
+
 	self.moveDirection = Vector2(0,0)
 	self.lookDirection = Vector2(0,0)
 	self.moveModifier = 1
@@ -35,6 +50,7 @@ function PlayerController:OnActivate()
 	self.rayCastConfig = RayCastConfiguration()
 	self.rayCastConfig.ignoreEntityIds = vector_EntityId()
 	self.rayCastConfig.ignoreEntityIds:PushBack(self.entityId)
+	self.rayCastConfig.ignoreEntityIds:PushBack(self.Properties.Collider)
 	self.rayCastConfig.direction = Vector3(0,0,-1) 
 	self.rayCastConfig.maxDistance = self.Properties.DistanceToGround
 	self.rayCastConfig.maxHits = 1
@@ -51,6 +67,7 @@ end
 function PlayerController:UpdateOnGround(playerTM)
 	self.rayCastConfig.origin = playerTM:GetPosition()
 
+	local wasOnGround = self.onGround
 	self.onGround = 0
 	local result = PhysicsSystemRequestBus.Broadcast.RayCast(self.rayCastConfig)
 	if result ~= nil then
@@ -58,7 +75,13 @@ function PlayerController:UpdateOnGround(playerTM)
 			self.onGround = 1
 		end
 	end
-	--Debug.Log("onground " .. tostring(self.onGround))
+
+	if self.onGround == 1 and wasOnGround == 0 then
+		--Debug:Log("Playing Landed sound")
+		AudioTriggerComponentRequestBus.Event.ExecuteTrigger(self.entityId, self.Properties.Audio.Land)
+	else
+		--Debug:Log("OnGround " .. tostring(self.onGround) ..  " wasOnGround " .. tostring(wasOnGround))
+	end
 end
 
 function PlayerController:OnTick(deltaTime, scriptTime)
@@ -93,6 +116,8 @@ function PlayerController:OnTick(deltaTime, scriptTime)
 
 	if self.jumpAmount > 0 then
 		if self.onGround > 0 then
+			self:Log("Jump")
+			AudioTriggerComponentRequestBus.Event.ExecuteTrigger(self.entityId, self.Properties.Audio.Jump)
 			RigidBodyRequestBus.Event.ApplyLinearImpulse(self.entityId, Vector3(0,0,self.Properties.JumpAmount))
 		end
 		self.jumpAmount = 0
@@ -102,17 +127,24 @@ function PlayerController:OnTick(deltaTime, scriptTime)
 	local velocity = RigidBodyRequestBus.Event.GetLinearVelocity(self.entityId)
 	if velocity:GetLengthSq() > self.maxVelocitySq then
 		local newVelocity = velocity:GetNormalized() * self.Properties.MaxMoveSpeed
+		self:Log("Limiting velocity")
 		RigidBodyRequestBus.Event.SetLinearVelocity(self.entityId, newVelocity)
 	end
 end
 
 function PlayerController:OnDeactivate()
 	self:UnBindInputEvents(self.InputEvents)
+	Utilities:UnBindEvents(self.Events)
 
 	if self.tickHandler ~= nil then
 		self.tickHandler:Disconnect()
 		self.tickHandler = nil
 	end
+end
+
+function PlayerController.Events.OnSetEnabled:OnEventBegin(enabled)
+	self.Component:Log("OnSetEnabled "..tostring(enabled))
+	self.Component:SetEnabled(enabled)
 end
 
 function PlayerController:SetEnabled(enabled)
