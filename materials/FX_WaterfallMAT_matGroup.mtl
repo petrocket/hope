@@ -1,0 +1,22 @@
+<Material MtlFlags="557312" DccMaterialHash="0" vertModifType="0">
+ <SubMaterials>
+  <Material Name="FX_WaterfallMAT" MtlFlags="524448" DccMaterialHash="0" Shader="Illum" GenMask="200802000000003" StringGenMask="%ALLOW_SILHOUETTE_POM%ALLOW_SPECULAR_ANTIALIASING%NORMAL_MAP%SUBSURFACE_SCATTERING%VERTCOLORS" SurfaceType="mat_water" Diffuse="0.8962695,0.96468639,1,1" Specular="0.080219828,0.10702311,0.10946172,1" Opacity="1" Shininess="223.89999" AlphaTest="0.27000001" vertModifType="0" LayerAct="1">
+   <Textures>
+    <Texture Map="Diffuse" File="textures/natural/fx_waterfalls_01.dds">
+     <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TexMod_VOscillatorType="2" TexMod_VOscillatorRate="0.34999999" TexMod_VOscillatorAmplitude="-1"/>
+    </Texture>
+    <Texture Map="Bumpmap" File="textures/natural/fx_waterfalls_01_ddn.dds"/>
+   </Textures>
+   <PublicParams EmittanceMapGamma="1" SSSIndex="0" IndirectColor="0.25,0.25,0.25"/>
+  </Material>
+  <Material Name="FX_Waterfall2MAT" MtlFlags="557216" DccMaterialHash="0" Shader="Illum" GenMask="200802000000003" StringGenMask="%ALLOW_SILHOUETTE_POM%ALLOW_SPECULAR_ANTIALIASING%NORMAL_MAP%SUBSURFACE_SCATTERING%VERTCOLORS" SurfaceType="mat_water" Diffuse="1,1,1,0.77999997" Specular="0.0085681258,0.010960096,0.010329825,0.34145099" Emittance="0.0097212186,0.0097212186,0.0097212186,0" Opacity="0.77999997" Shininess="87.07" vertModifType="0" LayerAct="1">
+   <Textures>
+    <Texture Map="Diffuse" File="textures/natural/fx_waterfalls_02.dds">
+     <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TexMod_VOscillatorType="2" TexMod_VOscillatorRate="0.2" TexMod_VOscillatorAmplitude="-1"/>
+    </Texture>
+    <Texture Map="Bumpmap" File="textures/natural/fx_waterfalls_01_ddn.dds"/>
+   </Textures>
+   <PublicParams EmittanceMapGamma="1" SSSIndex="0" IndirectColor="0.25,0.25,0.25"/>
+  </Material>
+ </SubMaterials>
+</Material>

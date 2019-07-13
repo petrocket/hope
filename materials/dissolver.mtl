@@ -1,0 +1,7 @@
+<Material MtlFlags="524288" DccMaterialHash="0" Shader="Illum" GenMask="800080000003" StringGenMask="%ALLOW_SILHOUETTE_POM%ALLOW_SPECULAR_ANTIALIASING%FX_DISSOLVE%SUBSURFACE_SCATTERING" SurfaceType="mat_default" Diffuse="1,1,1,1" Specular="0.045000002,0.045000002,0.045000002,1" Opacity="1" Shininess="10" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/dissolve_checkers.dds"/>
+  <Texture Map="Opacity" File="textures/dissolve_checkers.dds"/>
+ </Textures>
+ <PublicParams DissolveColor="0.11953845,0.1559265,0.38642946" EmittanceMapGamma="1" DissolveEdgeThickness="1" SSSIndex="0" DissolvePercentage="0" IndirectColor="0.25,0.25,0.25"/>
+</Material>

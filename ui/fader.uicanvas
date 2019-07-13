@@ -1,0 +1,630 @@
+<ObjectStream version="3">
+	<Class name="UiCanvasFileObject" version="2" type="{1F02632F-F113-49B1-85AD-8CD0FA78B8AA}">
+		<Class name="AZ::Entity" field="CanvasEntity" version="2" type="{75651658-8663-478D-9090-2432DFCAFA44}">
+			<Class name="EntityId" field="Id" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+				<Class name="AZ::u64" field="id" value="31691132808368" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+			</Class>
+			<Class name="AZStd::string" field="Name" value="UiCanvasEntity" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+			<Class name="AZStd::vector" field="Components" type="{13D58FF9-1088-5C69-9A1F-C2A144B57B78}">
+				<Class name="UiCanvasComponent" field="element" version="3" type="{50B8CF6C-B19A-4D86-AFE9-96EFB820D422}">
+					<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+						<Class name="AZ::u64" field="Id" value="6890145687406861504" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+					</Class>
+					<Class name="AZ::u64" field="UniqueId" value="12352909276713638682" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+					<Class name="EntityId" field="RootElement" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+						<Class name="AZ::u64" field="id" value="31704017710256" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+					</Class>
+					<Class name="unsigned int" field="LastElement" value="2" type="{43DA906B-7DEF-4CA8-9790-854106D3F983}"/>
+					<Class name="Vector2" field="CanvasSize" value="1920.0000000 1080.0000000" type="{3D80F623-C85C-4741-90D0-E4E66164E6BF}"/>
+					<Class name="bool" field="IsSnapEnabled" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="int" field="DrawOrder" value="4" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+					<Class name="bool" field="IsPixelAligned" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="bool" field="IsTextPixelAligned" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="bool" field="RenderToTexture" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="AZStd::string" field="RenderTargetName" value="" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="bool" field="IsPosInputSupported" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="bool" field="IsConsumingAllInput" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="bool" field="IsMultiTouchSupported" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="bool" field="IsNavigationSupported" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="EntityId" field="FirstHoverElement" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+						<Class name="AZ::u64" field="id" value="4294967295" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+					</Class>
+					<Class name="UiAnimationSystem" field="AnimSystem" version="1" type="{2592269B-EF74-4409-B29F-682DC0B45DAF}">
+						<Class name="AZStd::vector" field="Sequences" type="{9F8D44A9-9731-5314-885E-B958D4216073}">
+							<Class name="AZStd::intrusive_ptr" field="element" type="{E60FCB60-F631-5F86-A9CB-66FF429F3C0A}">
+								<Class name="CUiAnimSequence" field="element" version="1" type="{AA5AB4ED-CB98-4166-953E-0FE1EF7AC61F}">
+									<Class name="AZStd::string" field="Name" value="FadeIn" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+									<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+									<Class name="Range" field="TimeRange" type="{515CF4CF-4992-4139-BDE5-42A887432B45}">
+										<Class name="float" field="Start" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="End" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+									</Class>
+									<Class name="unsigned int" field="ID" value="1" type="{43DA906B-7DEF-4CA8-9790-854106D3F983}"/>
+									<Class name="AZStd::vector" field="Nodes" type="{DB4B66E4-13A0-5CD5-8026-F02CA7DA76F8}">
+										<Class name="AZStd::intrusive_ptr" field="element" type="{FC373751-3E99-5791-B583-0635BDC4A193}">
+											<Class name="CUiAnimAzEntityNode" field="element" version="1" type="{1C6FAEE1-92E4-42ED-8EEB-3483C36A0B77}">
+												<Class name="CUiAnimNode" field="BaseClass1" version="1" type="{1ECF3B73-FCED-464D-82E8-CFAF31BB63DC}">
+													<Class name="int" field="ID" value="1" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+													<Class name="int" field="Parent" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+													<Class name="AZStd::string" field="Name" value="Image (2)" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+													<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+													<Class name="AZStd::vector" field="Tracks" type="{7016336A-3C8A-5EF3-961E-75D6F1F31434}">
+														<Class name="AZStd::intrusive_ptr" field="element" type="{B1FE9A95-C664-5DD7-A687-25A033E669DA}">
+															<Class name="TUiAnimSplineTrack&lt;Vec2 &gt;" field="element" version="2" type="{1E34E372-3A0E-5246-A4B2-70E75B5AA11F}">
+																<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																<Class name="Vec2" field="DefaultValue" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																	<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																	<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																</Class>
+																<Class name="CUiAnimParamType" field="ParamType" version="1" type="{3D4ADD98-DFDD-4984-AC59-E59C5D718CFC}">
+																	<Class name="int" field="Type" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																</Class>
+																<Class name="UiAnimParamData" field="ParamData" version="1" type="{B2E9F22C-8DB5-40FA-9DF1-276E91BA8B95}">
+																	<Class name="AZ::u64" field="ComponentId" value="17217584308910145132" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+																	<Class name="AZ::Uuid" field="TypeId" value="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+																	<Class name="AZStd::string" field="Name" value="Alpha" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																</Class>
+																<Class name="AZStd::intrusive_ptr" field="Spline" type="{42769CDB-1ECF-5831-BCC4-FA01AF839F44}">
+																	<Class name="UiSpline::TrackSplineInterpolator&lt;Vec2&gt;" field="element" version="1" type="{38F814D4-6041-4442-9704-9F68E996D55B}">
+																		<Class name="BezierSplineVec2" field="BaseClass1" version="1" type="{EC8BA7BD-EF3B-453A-8017-CD1BF5B7C011}">
+																			<Class name="TSplineBezierBasisVec2" field="BaseClass1" version="1" type="{B661D05E-B912-4BD9-B102-FA82938243A9}">
+																				<Class name="AZStd::vector" field="Keys" type="{69C92A7F-B783-581F-ADD0-201DD7668EDE}">
+																					<Class name="UiSpline::SplineKeyEx&lt;Vec2&gt;" field="element" version="1" type="{1AE37C63-D5C2-4E65-A08B-7020E7696233}">
+																						<Class name="UiSpline::SplineKey&lt;Vec2&gt;" field="BaseClass1" version="1" type="{E2301E81-6BAF-4A17-886C-76F1A9C37118}">
+																							<Class name="float" field="time" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							<Class name="int" field="flags" value="100" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																							<Class name="Vec2" field="value" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="ds" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="dd" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																						</Class>
+																					</Class>
+																					<Class name="UiSpline::SplineKeyEx&lt;Vec2&gt;" field="element" version="1" type="{1AE37C63-D5C2-4E65-A08B-7020E7696233}">
+																						<Class name="UiSpline::SplineKey&lt;Vec2&gt;" field="BaseClass1" version="1" type="{E2301E81-6BAF-4A17-886C-76F1A9C37118}">
+																							<Class name="float" field="time" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							<Class name="int" field="flags" value="65636" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																							<Class name="Vec2" field="value" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="ds" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="dd" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																						</Class>
+																					</Class>
+																				</Class>
+																			</Class>
+																		</Class>
+																	</Class>
+																</Class>
+															</Class>
+														</Class>
+														<Class name="AZStd::intrusive_ptr" field="element" type="{B1FE9A95-C664-5DD7-A687-25A033E669DA}">
+															<Class name="UiCompoundSplineTrack" field="element" version="1" type="{91947B8B-65B7-451D-9D04-0C821C82014E}">
+																<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																<Class name="CUiAnimParamType" field="ParamType" version="1" type="{3D4ADD98-DFDD-4984-AC59-E59C5D718CFC}">
+																	<Class name="int" field="Type" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																</Class>
+																<Class name="UiAnimParamData" field="ParamData" version="1" type="{B2E9F22C-8DB5-40FA-9DF1-276E91BA8B95}">
+																	<Class name="AZ::u64" field="ComponentId" value="17217584308910145132" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+																	<Class name="AZ::Uuid" field="TypeId" value="{7894072A-9050-4F0F-901B-34B1A0D29417}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+																	<Class name="AZStd::string" field="Name" value="Color" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																</Class>
+																<Class name="int" field="NumSubTracks" value="3" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																<Class name="AZStd::array" field="SubTracks" type="{BB5631EF-F60D-5045-92DC-B49037FE63A1}">
+																	<Class name="AZStd::intrusive_ptr" field="element" type="{B1FE9A95-C664-5DD7-A687-25A033E669DA}">
+																		<Class name="TUiAnimSplineTrack&lt;Vec2 &gt;" field="element" version="2" type="{1E34E372-3A0E-5246-A4B2-70E75B5AA11F}">
+																			<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																			<Class name="Vec2" field="DefaultValue" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																				<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																				<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																			</Class>
+																			<Class name="CUiAnimParamType" field="ParamType" version="1" type="{3D4ADD98-DFDD-4984-AC59-E59C5D718CFC}">
+																				<Class name="int" field="Type" value="3" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																			</Class>
+																			<Class name="UiAnimParamData" field="ParamData" version="1" type="{B2E9F22C-8DB5-40FA-9DF1-276E91BA8B95}">
+																				<Class name="AZ::u64" field="ComponentId" value="0" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+																				<Class name="AZ::Uuid" field="TypeId" value="{00000000-0000-0000-0000-000000000000}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+																				<Class name="AZStd::string" field="Name" value="" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																			</Class>
+																			<Class name="AZStd::intrusive_ptr" field="Spline" type="{42769CDB-1ECF-5831-BCC4-FA01AF839F44}">
+																				<Class name="UiSpline::TrackSplineInterpolator&lt;Vec2&gt;" field="element" version="1" type="{38F814D4-6041-4442-9704-9F68E996D55B}">
+																					<Class name="BezierSplineVec2" field="BaseClass1" version="1" type="{EC8BA7BD-EF3B-453A-8017-CD1BF5B7C011}">
+																						<Class name="TSplineBezierBasisVec2" field="BaseClass1" version="1" type="{B661D05E-B912-4BD9-B102-FA82938243A9}">
+																							<Class name="AZStd::vector" field="Keys" type="{69C92A7F-B783-581F-ADD0-201DD7668EDE}">
+																								<Class name="UiSpline::SplineKeyEx&lt;Vec2&gt;" field="element" version="1" type="{1AE37C63-D5C2-4E65-A08B-7020E7696233}">
+																									<Class name="UiSpline::SplineKey&lt;Vec2&gt;" field="BaseClass1" version="1" type="{E2301E81-6BAF-4A17-886C-76F1A9C37118}">
+																										<Class name="float" field="time" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										<Class name="int" field="flags" value="73" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																										<Class name="Vec2" field="value" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																										<Class name="Vec2" field="ds" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																										<Class name="Vec2" field="dd" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																									</Class>
+																								</Class>
+																							</Class>
+																						</Class>
+																					</Class>
+																				</Class>
+																			</Class>
+																		</Class>
+																	</Class>
+																	<Class name="AZStd::intrusive_ptr" field="element" type="{B1FE9A95-C664-5DD7-A687-25A033E669DA}">
+																		<Class name="TUiAnimSplineTrack&lt;Vec2 &gt;" field="element" version="2" type="{1E34E372-3A0E-5246-A4B2-70E75B5AA11F}">
+																			<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																			<Class name="Vec2" field="DefaultValue" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																				<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																				<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																			</Class>
+																			<Class name="CUiAnimParamType" field="ParamType" version="1" type="{3D4ADD98-DFDD-4984-AC59-E59C5D718CFC}">
+																				<Class name="int" field="Type" value="3" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																			</Class>
+																			<Class name="UiAnimParamData" field="ParamData" version="1" type="{B2E9F22C-8DB5-40FA-9DF1-276E91BA8B95}">
+																				<Class name="AZ::u64" field="ComponentId" value="0" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+																				<Class name="AZ::Uuid" field="TypeId" value="{00000000-0000-0000-0000-000000000000}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+																				<Class name="AZStd::string" field="Name" value="" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																			</Class>
+																			<Class name="AZStd::intrusive_ptr" field="Spline" type="{42769CDB-1ECF-5831-BCC4-FA01AF839F44}">
+																				<Class name="UiSpline::TrackSplineInterpolator&lt;Vec2&gt;" field="element" version="1" type="{38F814D4-6041-4442-9704-9F68E996D55B}">
+																					<Class name="BezierSplineVec2" field="BaseClass1" version="1" type="{EC8BA7BD-EF3B-453A-8017-CD1BF5B7C011}">
+																						<Class name="TSplineBezierBasisVec2" field="BaseClass1" version="1" type="{B661D05E-B912-4BD9-B102-FA82938243A9}">
+																							<Class name="AZStd::vector" field="Keys" type="{69C92A7F-B783-581F-ADD0-201DD7668EDE}">
+																								<Class name="UiSpline::SplineKeyEx&lt;Vec2&gt;" field="element" version="1" type="{1AE37C63-D5C2-4E65-A08B-7020E7696233}">
+																									<Class name="UiSpline::SplineKey&lt;Vec2&gt;" field="BaseClass1" version="1" type="{E2301E81-6BAF-4A17-886C-76F1A9C37118}">
+																										<Class name="float" field="time" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										<Class name="int" field="flags" value="73" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																										<Class name="Vec2" field="value" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																										<Class name="Vec2" field="ds" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																										<Class name="Vec2" field="dd" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																									</Class>
+																								</Class>
+																							</Class>
+																						</Class>
+																					</Class>
+																				</Class>
+																			</Class>
+																		</Class>
+																	</Class>
+																	<Class name="AZStd::intrusive_ptr" field="element" type="{B1FE9A95-C664-5DD7-A687-25A033E669DA}">
+																		<Class name="TUiAnimSplineTrack&lt;Vec2 &gt;" field="element" version="2" type="{1E34E372-3A0E-5246-A4B2-70E75B5AA11F}">
+																			<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																			<Class name="Vec2" field="DefaultValue" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																				<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																				<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																			</Class>
+																			<Class name="CUiAnimParamType" field="ParamType" version="1" type="{3D4ADD98-DFDD-4984-AC59-E59C5D718CFC}">
+																				<Class name="int" field="Type" value="3" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																			</Class>
+																			<Class name="UiAnimParamData" field="ParamData" version="1" type="{B2E9F22C-8DB5-40FA-9DF1-276E91BA8B95}">
+																				<Class name="AZ::u64" field="ComponentId" value="0" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+																				<Class name="AZ::Uuid" field="TypeId" value="{00000000-0000-0000-0000-000000000000}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+																				<Class name="AZStd::string" field="Name" value="" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																			</Class>
+																			<Class name="AZStd::intrusive_ptr" field="Spline" type="{42769CDB-1ECF-5831-BCC4-FA01AF839F44}">
+																				<Class name="UiSpline::TrackSplineInterpolator&lt;Vec2&gt;" field="element" version="1" type="{38F814D4-6041-4442-9704-9F68E996D55B}">
+																					<Class name="BezierSplineVec2" field="BaseClass1" version="1" type="{EC8BA7BD-EF3B-453A-8017-CD1BF5B7C011}">
+																						<Class name="TSplineBezierBasisVec2" field="BaseClass1" version="1" type="{B661D05E-B912-4BD9-B102-FA82938243A9}">
+																							<Class name="AZStd::vector" field="Keys" type="{69C92A7F-B783-581F-ADD0-201DD7668EDE}">
+																								<Class name="UiSpline::SplineKeyEx&lt;Vec2&gt;" field="element" version="1" type="{1AE37C63-D5C2-4E65-A08B-7020E7696233}">
+																									<Class name="UiSpline::SplineKey&lt;Vec2&gt;" field="BaseClass1" version="1" type="{E2301E81-6BAF-4A17-886C-76F1A9C37118}">
+																										<Class name="float" field="time" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										<Class name="int" field="flags" value="73" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																										<Class name="Vec2" field="value" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																										<Class name="Vec2" field="ds" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																										<Class name="Vec2" field="dd" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																											<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																											<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																										</Class>
+																									</Class>
+																								</Class>
+																							</Class>
+																						</Class>
+																					</Class>
+																				</Class>
+																			</Class>
+																		</Class>
+																	</Class>
+																	<Class name="AZStd::intrusive_ptr" field="element" type="{B1FE9A95-C664-5DD7-A687-25A033E669DA}"/>
+																</Class>
+																<Class name="AZStd::array" field="SubTrackNames" type="{8C84DA35-AD6D-5823-8F14-175626392810}">
+																	<Class name="AZStd::string" field="element" value="R" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																	<Class name="AZStd::string" field="element" value="G" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																	<Class name="AZStd::string" field="element" value="B" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																	<Class name="AZStd::string" field="element" value="W" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																</Class>
+															</Class>
+														</Class>
+													</Class>
+												</Class>
+												<Class name="EntityId" field="Entity" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+													<Class name="AZ::u64" field="id" value="31712607644848" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+												</Class>
+											</Class>
+										</Class>
+									</Class>
+								</Class>
+							</Class>
+							<Class name="AZStd::intrusive_ptr" field="element" type="{E60FCB60-F631-5F86-A9CB-66FF429F3C0A}">
+								<Class name="CUiAnimSequence" field="element" version="1" type="{AA5AB4ED-CB98-4166-953E-0FE1EF7AC61F}">
+									<Class name="AZStd::string" field="Name" value="FadeOut" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+									<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+									<Class name="Range" field="TimeRange" type="{515CF4CF-4992-4139-BDE5-42A887432B45}">
+										<Class name="float" field="Start" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="End" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+									</Class>
+									<Class name="unsigned int" field="ID" value="2" type="{43DA906B-7DEF-4CA8-9790-854106D3F983}"/>
+									<Class name="AZStd::vector" field="Nodes" type="{DB4B66E4-13A0-5CD5-8026-F02CA7DA76F8}">
+										<Class name="AZStd::intrusive_ptr" field="element" type="{FC373751-3E99-5791-B583-0635BDC4A193}">
+											<Class name="CUiAnimAzEntityNode" field="element" version="1" type="{1C6FAEE1-92E4-42ED-8EEB-3483C36A0B77}">
+												<Class name="CUiAnimNode" field="BaseClass1" version="1" type="{1ECF3B73-FCED-464D-82E8-CFAF31BB63DC}">
+													<Class name="int" field="ID" value="1" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+													<Class name="int" field="Parent" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+													<Class name="AZStd::string" field="Name" value="Image (2)" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+													<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+													<Class name="AZStd::vector" field="Tracks" type="{7016336A-3C8A-5EF3-961E-75D6F1F31434}">
+														<Class name="AZStd::intrusive_ptr" field="element" type="{B1FE9A95-C664-5DD7-A687-25A033E669DA}">
+															<Class name="TUiAnimSplineTrack&lt;Vec2 &gt;" field="element" version="2" type="{1E34E372-3A0E-5246-A4B2-70E75B5AA11F}">
+																<Class name="int" field="Flags" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																<Class name="Vec2" field="DefaultValue" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																	<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																	<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																</Class>
+																<Class name="CUiAnimParamType" field="ParamType" version="1" type="{3D4ADD98-DFDD-4984-AC59-E59C5D718CFC}">
+																	<Class name="int" field="Type" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																</Class>
+																<Class name="UiAnimParamData" field="ParamData" version="1" type="{B2E9F22C-8DB5-40FA-9DF1-276E91BA8B95}">
+																	<Class name="AZ::u64" field="ComponentId" value="17217584308910145132" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+																	<Class name="AZ::Uuid" field="TypeId" value="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+																	<Class name="AZStd::string" field="Name" value="Alpha" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+																</Class>
+																<Class name="AZStd::intrusive_ptr" field="Spline" type="{42769CDB-1ECF-5831-BCC4-FA01AF839F44}">
+																	<Class name="UiSpline::TrackSplineInterpolator&lt;Vec2&gt;" field="element" version="1" type="{38F814D4-6041-4442-9704-9F68E996D55B}">
+																		<Class name="BezierSplineVec2" field="BaseClass1" version="1" type="{EC8BA7BD-EF3B-453A-8017-CD1BF5B7C011}">
+																			<Class name="TSplineBezierBasisVec2" field="BaseClass1" version="1" type="{B661D05E-B912-4BD9-B102-FA82938243A9}">
+																				<Class name="AZStd::vector" field="Keys" type="{69C92A7F-B783-581F-ADD0-201DD7668EDE}">
+																					<Class name="UiSpline::SplineKeyEx&lt;Vec2&gt;" field="element" version="1" type="{1AE37C63-D5C2-4E65-A08B-7020E7696233}">
+																						<Class name="UiSpline::SplineKey&lt;Vec2&gt;" field="BaseClass1" version="1" type="{E2301E81-6BAF-4A17-886C-76F1A9C37118}">
+																							<Class name="float" field="time" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							<Class name="int" field="flags" value="65633" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																							<Class name="Vec2" field="value" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="ds" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="dd" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="-0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																						</Class>
+																					</Class>
+																					<Class name="UiSpline::SplineKeyEx&lt;Vec2&gt;" field="element" version="1" type="{1AE37C63-D5C2-4E65-A08B-7020E7696233}">
+																						<Class name="UiSpline::SplineKey&lt;Vec2&gt;" field="BaseClass1" version="1" type="{E2301E81-6BAF-4A17-886C-76F1A9C37118}">
+																							<Class name="float" field="time" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							<Class name="int" field="flags" value="100" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+																							<Class name="Vec2" field="value" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="1.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="ds" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="-0.3333333" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																							<Class name="Vec2" field="dd" type="{844131BA-9565-42F3-8482-6F65A6D5FC59}">
+																								<Class name="float" field="x" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																								<Class name="float" field="y" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+																							</Class>
+																						</Class>
+																					</Class>
+																				</Class>
+																			</Class>
+																		</Class>
+																	</Class>
+																</Class>
+															</Class>
+														</Class>
+													</Class>
+												</Class>
+												<Class name="EntityId" field="Entity" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+													<Class name="AZ::u64" field="id" value="31712607644848" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+												</Class>
+											</Class>
+										</Class>
+									</Class>
+								</Class>
+							</Class>
+						</Class>
+					</Class>
+					<Class name="AnimationData" field="AnimationData" version="1" type="{FDC58CF7-8109-48F2-8D5D-BCBAF774ABB7}">
+						<Class name="AZStd::string" field="SerializeString" value="" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					</Class>
+					<Class name="EntityId" field="TooltipDisplayElement" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+						<Class name="AZ::u64" field="id" value="4294967295" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+					</Class>
+					<Class name="float" field="SnapDistance" value="10.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+					<Class name="float" field="SnapRotationDegrees" value="10.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+					<Class name="AZStd::vector" field="HorizontalGuides" type="{6106BF95-5ACD-5071-8D0E-4F846C2138AD}"/>
+					<Class name="AZStd::vector" field="VerticalGuides" type="{6106BF95-5ACD-5071-8D0E-4F846C2138AD}"/>
+					<Class name="Color" field="GuideColor" value="0.2500000 1.0000000 0.2500000 1.0000000" type="{7894072A-9050-4F0F-901B-34B1A0D29417}"/>
+					<Class name="bool" field="GuidesLocked" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="AZStd::vector" field="TextureAtlases" type="{9FFE44E4-7695-5AA0-8E4B-33276E0E6306}"/>
+				</Class>
+				<Class name="ScriptEditorComponent" field="element" type="{B5FC8679-FA2A-4C7C-AC42-DCC279EA613A}">
+					<Class name="EditorComponentBase" field="BaseClass1" version="1" type="{D5346BD4-7F20-444E-B370-327ACD03D4A0}">
+						<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+							<Class name="AZ::u64" field="Id" value="15553634002576768896" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+						</Class>
+					</Class>
+					<Class name="AzFramework::ScriptComponent" field="ScriptComponent" version="3" type="{8D1BC97E-C55D-4D34-A460-E63C57CD0D4B}">
+						<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+							<Class name="AZ::u64" field="Id" value="0" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+						</Class>
+						<Class name="NetBindable" field="BaseClass2" type="{80206665-D429-4703-B42E-94434F82F381}">
+							<Class name="bool" field="m_isSyncEnabled" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+						</Class>
+						<Class name="unsigned int" field="ContextID" value="0" type="{43DA906B-7DEF-4CA8-9790-854106D3F983}"/>
+						<Class name="ScriptPropertyGroup" field="Properties" type="{79682522-2F81-4B36-9FC2-A091C7504F7F}">
+							<Class name="AZStd::string" field="Name" value="Properties" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+							<Class name="AZStd::vector" field="Properties" type="{2407B2F9-E3EE-5D01-8DBF-1FB8BED06482}">
+								<Class name="AzFramework::ScriptPropertyBoolean" field="element" version="1" type="{EA7335F8-5B9F-4744-B805-FEF9240451BD}">
+									<Class name="AzFramework::ScriptProperty" field="BaseClass1" version="2" type="{D227D737-F1ED-4FB3-A1FB-38E4985D2E7A}">
+										<Class name="AZ::u64" field="id" value="1822771111" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+										<Class name="AZStd::string" field="name" value="Debug" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+									</Class>
+									<Class name="bool" field="value" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+								</Class>
+								<Class name="AzFramework::ScriptPropertyString" field="element" version="1" type="{A0229C6D-B010-47E7-8985-EE220FC7BFAF}">
+									<Class name="AzFramework::ScriptProperty" field="BaseClass1" version="2" type="{D227D737-F1ED-4FB3-A1FB-38E4985D2E7A}">
+										<Class name="AZ::u64" field="id" value="1001261735" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+										<Class name="AZStd::string" field="name" value="Event" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+									</Class>
+									<Class name="AZStd::string" field="value" value="OnPlayUISequence" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+								</Class>
+							</Class>
+							<Class name="AZStd::vector" field="Groups" type="{E3B6A07B-498D-50CE-A8E5-5AFDA2231792}"/>
+						</Class>
+						<Class name="Asset" field="Script" value="id={FD043413-4677-5102-8B60-CF48CFCC3C14}:1,type={82557326-4AE3-416C-95D6-C70635AB7588},hint={scripts/uigameplayeventsequence.luac}" version="1" type="{77A19D40-8731-4D3C-9041-1B43047366A4}"/>
+					</Class>
+					<Class name="Asset" field="ScriptAsset" value="id={FD043413-4677-5102-8B60-CF48CFCC3C14}:1,type={82557326-4AE3-416C-95D6-C70635AB7588},hint={scripts/uigameplayeventsequence.luac}" version="1" type="{77A19D40-8731-4D3C-9041-1B43047366A4}"/>
+				</Class>
+			</Class>
+			<Class name="bool" field="IsDependencyReady" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+			<Class name="bool" field="IsRuntimeActive" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+		</Class>
+		<Class name="AZ::Entity" field="RootSliceEntity" version="2" type="{75651658-8663-478D-9090-2432DFCAFA44}">
+			<Class name="EntityId" field="Id" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+				<Class name="AZ::u64" field="id" value="31695427775664" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+			</Class>
+			<Class name="AZStd::string" field="Name" value="31695427775664" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+			<Class name="AZStd::vector" field="Components" type="{13D58FF9-1088-5C69-9A1F-C2A144B57B78}">
+				<Class name="SliceComponent" field="element" version="3" type="{AFD304E4-1773-47C8-855A-8B622398934F}">
+					<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+						<Class name="AZ::u64" field="Id" value="13604060267483296159" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+					</Class>
+					<Class name="AZStd::vector" field="Entities" type="{21786AF0-2606-5B9A-86EB-0892E2820E6C}">
+						<Class name="AZ::Entity" field="element" version="2" type="{75651658-8663-478D-9090-2432DFCAFA44}">
+							<Class name="EntityId" field="Id" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+								<Class name="AZ::u64" field="id" value="31704017710256" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+							</Class>
+							<Class name="AZStd::string" field="Name" value="_root" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+							<Class name="AZStd::vector" field="Components" type="{13D58FF9-1088-5C69-9A1F-C2A144B57B78}">
+								<Class name="EditorOnlyEntityComponent" field="element" type="{22A16F1D-6D49-422D-AAE9-91AE45B5D3E7}">
+									<Class name="EditorComponentBase" field="BaseClass1" version="1" type="{D5346BD4-7F20-444E-B370-327ACD03D4A0}">
+										<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+											<Class name="AZ::u64" field="Id" value="742057338525515642" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+										</Class>
+									</Class>
+									<Class name="bool" field="IsEditorOnly" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+								</Class>
+								<Class name="UiTransform2dComponent" field="element" version="2" type="{2751A5A5-3291-4A4D-9FC0-9CB0EB8D1DE6}">
+									<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+										<Class name="AZ::u64" field="Id" value="17386560079183472438" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+									</Class>
+									<Class name="Anchors" field="Anchors" type="{65D4346C-FB16-4CB0-9BDC-1185B122C4A9}">
+										<Class name="float" field="left" value="0.5000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="top" value="0.5000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="right" value="0.5000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="bottom" value="0.5000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+									</Class>
+									<Class name="Offsets" field="Offsets" type="{F681BA9D-245C-4630-B20E-05DD752FAD57}">
+										<Class name="float" field="left" value="-50.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="top" value="-50.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="right" value="50.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+										<Class name="float" field="bottom" value="50.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+									</Class>
+									<Class name="Vector2" field="Pivot" value="0.5000000 0.5000000" type="{3D80F623-C85C-4741-90D0-E4E66164E6BF}"/>
+									<Class name="float" field="Rotation" value="0.0000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
+									<Class name="Vector2" field="Scale" value="1.0000000 1.0000000" type="{3D80F623-C85C-4741-90D0-E4E66164E6BF}"/>
+									<Class name="bool" field="ScaleToDevice" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+								</Class>
+								<Class name="UiElementComponent" field="element" version="3" type="{4A97D63E-CE7A-45B6-AAE4-102DB4334688}">
+									<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+										<Class name="AZ::u64" field="Id" value="15236272292451279611" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+									</Class>
+									<Class name="unsigned int" field="Id" value="1" type="{43DA906B-7DEF-4CA8-9790-854106D3F983}"/>
+									<Class name="bool" field="IsEnabled" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+									<Class name="bool" field="IsVisibleInEditor" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+									<Class name="bool" field="IsSelectableInEditor" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+									<Class name="bool" field="IsSelectedInEditor" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+									<Class name="bool" field="IsExpandedInEditor" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+									<Class name="AZStd::vector" field="ChildEntityIdOrder" type="{0DE523D9-AEAE-5FC4-9D40-967A2E2B8A62}">
+										<Class name="ChildEntityIdOrderEntry" field="element" version="1" type="{D6F3CC55-6C7C-4D64-818F-FA3378EC8DA2}">
+											<Class name="EntityId" field="ChildEntityId" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+												<Class name="AZ::u64" field="id" value="31712607644848" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+											</Class>
+											<Class name="AZ::u64" field="SortIndex" value="0" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+										</Class>
+									</Class>
+								</Class>
+							</Class>
+							<Class name="bool" field="IsDependencyReady" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+							<Class name="bool" field="IsRuntimeActive" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+						</Class>
+					</Class>
+					<Class name="AZStd::list" field="Prefabs" type="{DAD45EB6-5853-5645-B762-3A37F8775E12}">
+						<Class name="SliceReference" field="element" version="2" type="{F181B80D-44F0-4093-BB0D-C638A9A734BE}">
+							<Class name="AZStd::unordered_set" field="Instances" type="{989A5786-8D1B-525B-8DE3-6C70A775EA1C}">
+								<Class name="SliceInstance" field="element" version="3" type="{E6F11FB3-E9BF-43BA-BD78-2A19F51D0ED3}">
+									<Class name="AZ::Uuid" field="Id" value="{D139ECD7-97D1-4710-A5D8-87D9EB9AE461}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+									<Class name="AZStd::unordered_map" field="EntityIdMap" type="{D33569A9-EFFC-566C-8CCC-74D6E086A1B0}">
+										<Class name="AZStd::pair" field="element" type="{30DDE93C-E899-5AB9-856D-FC456D054EDB}">
+											<Class name="EntityId" field="value1" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+												<Class name="AZ::u64" field="id" value="17165417810190062216" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+											</Class>
+											<Class name="EntityId" field="value2" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+												<Class name="AZ::u64" field="id" value="31712607644848" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+											</Class>
+										</Class>
+										<Class name="AZStd::pair" field="element" type="{30DDE93C-E899-5AB9-856D-FC456D054EDB}">
+											<Class name="EntityId" field="value1" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+												<Class name="AZ::u64" field="id" value="303524160664" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+											</Class>
+											<Class name="EntityId" field="value2" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+												<Class name="AZ::u64" field="id" value="31716902612144" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+											</Class>
+										</Class>
+									</Class>
+									<Class name="DataPatch" field="DataPatch" type="{3A8D5EC9-D70E-41CB-879C-DEF6A6D6ED03}">
+										<Class name="AZ::Uuid" field="m_targetClassId" value="{05038EF7-9EF7-40D8-A29B-503D85B85AF8}" type="{E152C105-A133-4D03-BBF8-3D4B2FBA3E2A}"/>
+										<Class name="AZStd::unordered_map" field="m_patch" type="{CF3B3C65-49C0-5199-B671-E75347EB25C2}">
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="6055D5B600000000982473AB46000000FDF548EE00000000043B8CD812F7C2C1" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="000000000308E77AE6AC897D40358353637449B6DCFBC8D492573501D5346BD47F20444EB370327ACD03D4A048D4925735EDFCB2CFF75D43BEB26BF35821B2924779BF396750D659793347CD4FC8B91163F3E2B0993A08C1C2F712D88C3B04000000483084D12013D58FF910885C699A1FC2A144B57B78000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD41517849D000000001475CAB400000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D000000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD41517849D00000000A4725F8900000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D000000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="6055D5B600000000982473AB46000000FDF548EE0000000014C9AA6949519943" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="0000000003880247DE3DDA50C54F50B1DBBA4AE66AB056C8D492573501D5346BD47F20444EB370327ACD03D4A048D4925735EDFCB2CFF75D43BEB26BF35821B2924779BF396750D659793347CD4FC8B91163F3E2B0993A084399514969AAC914000000482222797CB6EFED5B19B450849D9242DECCE83872000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD41517849D0000000068E7677A00000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D000000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="6055D5B600000000982473AB46000000FDF548EE00000000035DA14F94BBDA09" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="000000000388026EA1E03D68B2466D97F783998C8C27F0C8D492573501D5346BD47F20444EB370327ACD03D4A048D4925735EDFCB2CFF75D43BEB26BF35821B2924779BF396750D659793347CD4FC8B91163F3E2B0993A0809DABB944FA15D03000000489EDE095CBE163120C1ED5F69A650DC2528A8FF94000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD49B93DD3500000000A4725F8900000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D3F8000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD49B93DD35000000001475CAB400000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D3F8000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD49B93DD3500000000CA1FD91E00000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D000000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD41517849D00000000CA1FD91E00000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D000000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE000000006CBEEDCEB425F1EE6A39E0D000000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D000000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE0000000014DF03983275CBD49B93DD350000000068E7677A00000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="00000000031CEA2C3E90AFBE44D4A90DFAAF79BAF93D000000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="E564EC500000000088D28A558DD037EEFDF548EE000000006CBEEDCEB425F1EEE948566600000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="0000000003397894072A90504F0F901B34B1A0D29417100000000000000000000000003F8000000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="6055D5B600000000982473AB46000000FDF548EE0000000038A9EC2842DDC685" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="000000000308D40FCB35153D45B3AF6D7BA576D8AFBBC8D492573501D5346BD47F20444EB370327ACD03D4A048D4925735EDFCB2CFF75D43BEB26BF35821B2924779BF396750D659793347CD4FC8B91163F3E2B0993A0885C6DD4228ECA93800000048E857436B13D58FF910885C699A1FC2A144B57B78000000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+											<Class name="AZStd::pair" field="element" type="{07DEDB71-0585-5BE6-83FF-1C9029B9E5DB}">
+												<Class name="AddressType" field="value1" value="6055D5B600000000982473AB460000004894D49600000000" type="{90752F2D-CBD3-4EE9-9CDD-447E797C8408}"/>
+												<Class name="ByteStream" field="value2" value="000000000319A0CA880CAFE443CB926C59AC48496112010000" type="{ADFD596B-7177-5519-9752-BC418FE42963}"/>
+											</Class>
+										</Class>
+									</Class>
+									<Class name="DataFlagsPerEntity" field="DataFlags" version="1" type="{57FE7B9E-B2AF-4F6F-9F8D-87F671E91C99}">
+										<Class name="AZStd::unordered_map" field="EntityToDataFlags" type="{CAB9E1F5-761E-54B8-916E-E7FB597E5EDE}"/>
+									</Class>
+								</Class>
+							</Class>
+							<Class name="Asset" field="Asset" value="id={90D127FB-8BDA-5614-A8D1-C9093693C33D}:1,type={C62C7A87-9C09-4148-A985-12F2C99C0A45},hint={ui/slices/library/image.slice}" version="1" type="{77A19D40-8731-4D3C-9041-1B43047366A4}"/>
+						</Class>
+					</Class>
+					<Class name="bool" field="IsDynamic" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					<Class name="AZ::Entity" field="MetadataEntity" version="2" type="{75651658-8663-478D-9090-2432DFCAFA44}">
+						<Class name="EntityId" field="Id" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+							<Class name="AZ::u64" field="id" value="31699722742960" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+						</Class>
+						<Class name="AZStd::string" field="Name" value="No Asset Association" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+						<Class name="AZStd::vector" field="Components" type="{13D58FF9-1088-5C69-9A1F-C2A144B57B78}">
+							<Class name="SliceMetadataInfoComponent" field="element" version="1" type="{25EE4D75-8A17-4449-81F4-E561005BAABD}">
+								<Class name="AZ::Component" field="BaseClass1" type="{EDFCB2CF-F75D-43BE-B26B-F35821B29247}">
+									<Class name="AZ::u64" field="Id" value="4758058087636864939" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+								</Class>
+								<Class name="AZStd::unordered_set" field="AssociatedIds" type="{6C8F8E52-AB4A-5C1F-8E56-9AC390290B94}"/>
+								<Class name="EntityId" field="ParentId" version="1" type="{6383F1D3-BB27-4E6B-A49A-6409B2059EAA}">
+									<Class name="AZ::u64" field="id" value="4294967295" type="{D6597933-47CD-4FC8-B911-63F3E2B0993A}"/>
+								</Class>
+								<Class name="AZStd::unordered_set" field="ChildrenIds" type="{6C8F8E52-AB4A-5C1F-8E56-9AC390290B94}"/>
+								<Class name="bool" field="PersistenceFlag" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+							</Class>
+						</Class>
+						<Class name="bool" field="IsDependencyReady" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+						<Class name="bool" field="IsRuntimeActive" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+					</Class>
+					<Class name="DataFlagsPerEntity" field="DataFlagsForNewEntities" version="1" type="{57FE7B9E-B2AF-4F6F-9F8D-87F671E91C99}">
+						<Class name="AZStd::unordered_map" field="EntityToDataFlags" type="{CAB9E1F5-761E-54B8-916E-E7FB597E5EDE}"/>
+					</Class>
+				</Class>
+			</Class>
+			<Class name="bool" field="IsDependencyReady" value="false" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+			<Class name="bool" field="IsRuntimeActive" value="true" type="{A0CA880C-AFE4-43CB-926C-59AC48496112}"/>
+		</Class>
+	</Class>
+</ObjectStream>
+

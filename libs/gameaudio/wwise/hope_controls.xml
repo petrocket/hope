@@ -1,0 +1,76 @@
+<ATLConfig atl_name="hope_controls">
+ <AudioTriggers>
+  <ATLTrigger atl_name="Stop_AMZ_SFX_Amb_WaterCave_01">
+   <WwiseEvent wwise_name="Stop_AMZ_SFX_Amb_WaterCave_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_AMZ_SFX_Amb_WaterCave_01">
+   <WwiseEvent wwise_name="Play_AMZ_SFX_Amb_WaterCave_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ambience_waterfall_sml_close_mono">
+   <WwiseEvent wwise_name="Play_ambience_waterfall_sml_close_mono"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ambience_waterfall_med_close_mono">
+   <WwiseEvent wwise_name="Play_ambience_waterfall_med_close_mono"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ambience_river_low_stereo">
+   <WwiseEvent wwise_name="Play_ambience_river_low_stereo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ambience_river_gentle_mono">
+   <WwiseEvent wwise_name="Play_ambience_river_gentle_mono"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ambience_Cave_high_stereo">
+   <WwiseEvent wwise_name="Play_ambience_Cave_high_stereo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Stop_shimmer_sparkle_loop_02">
+   <WwiseEvent wwise_name="Stop_shimmer_sparkle_loop_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ui_menu_popup_01">
+   <WwiseEvent wwise_name="Play_ui_menu_popup_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ui_menu_button_click_24">
+   <WwiseEvent wwise_name="Play_ui_menu_button_click_24"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_shimmer_sparkle_loop_02">
+   <WwiseEvent wwise_name="Play_shimmer_sparkle_loop_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_light_in_dark_spell_04">
+   <WwiseEvent wwise_name="Play_light_in_dark_spell_04"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_collect_item_07">
+   <WwiseEvent wwise_name="Play_collect_item_07"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Stop_HopeBackgroundMusic1">
+   <WwiseEvent wwise_name="Stop_HopeBackgroundMusic1"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_marimba_low_g">
+   <WwiseEvent wwise_name="Play_marimba_low_g"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_marimba_low_c">
+   <WwiseEvent wwise_name="Play_marimba_low_c"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_marimba_low_b_flat">
+   <WwiseEvent wwise_name="Play_marimba_low_b_flat"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_marimba_high_e">
+   <WwiseEvent wwise_name="Play_marimba_high_e"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_marimba_high_c">
+   <WwiseEvent wwise_name="Play_marimba_high_c"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_jump">
+   <WwiseEvent wwise_name="Play_jump"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ground_hit02">
+   <WwiseEvent wwise_name="Play_ground_hit02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_ground_hit">
+   <WwiseEvent wwise_name="Play_ground_hit"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_button01">
+   <WwiseEvent wwise_name="Play_button01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="Play_HopeBackgroundMusic1">
+   <WwiseEvent wwise_name="Play_HopeBackgroundMusic1"/>
+  </ATLTrigger>
+ </AudioTriggers>
+</ATLConfig>
