@@ -1,0 +1,97 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Crytek Engine Source File.
+//  Shader extension
+//  Copyright (C), Crytek Studios, 2001-2004.
+// -------------------------------------------------------------------------
+//  File name:   CommonZPrePass.cfi
+//  Version:     v1.00
+//  Created:     26/08/2012
+//  Compilers:   
+//  Description: Lean zprepass for most expensive cases, skips tessellated geom
+// -------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////
+
+struct vert2fragZPrepass
+{
+	OUT_P
+#if %_RT_ALPHATEST || %FX_DISSOLVE
+	float4 baseTC     : TEXCOORDN;
+#endif
+};
+
+struct pixout_zprepass
+{
+##if AZ_RESTRICTED_PLATFORM
+    ##include_restricted(CommonZPrePass_cfi, AZ_RESTRICTED_PLATFORM)
+##endif
+  half4 Color : COLOR0;
+};
+
+vert2fragZPrepass Common_ZPrepassVS(app2vertZGeneral IN)
+{
+    vert2fragZPrepass OUT = (vert2fragZPrepass)0;
+    streamPos vertPassPos = (streamPos)0;
+    streamPos_FromZ(IN, vertPassPos);
+
+    OUT.HPosition = Pos_VS_General(PerView_ViewProjZeroMatr, vertPassPos);
+    
+#if %FX_DISSOLVE
+    OUT.baseTC.xy = vertPassPos.baseTC.xy; 
+#endif
+
+	// todo: generalize alpha testing code
+#if %_RT_ALPHATEST
+	OUT.baseTC = vertPassPos.baseTC;
+	OUT.baseTC.w = GetMaterial_AlphaTest();
+	#if %LEAVES
+        // This is incorrect since we need to compensate for non-uniform scale, however cost is not justified for alpha correction
+		float3 worldTangentS = mul((const float3x3)vertPassPos.InstMatrix, vertPassPos.ObjToTangentSpace[0]);
+		float3 worldTangentT = mul((const float3x3)vertPassPos.InstMatrix, vertPassPos.ObjToTangentSpace[1]);
+		float3 worldTangentN = mul((const float3x3)vertPassPos.InstMatrix, vertPassPos.ObjToTangentSpace[2]);
+		OUT.baseTC.w = ParallelOpacityFalloff(vertPassPos.WorldPos.xyz, worldTangentN.xyz, CapOpacityFalloff, OUT.baseTC.w);
+	#endif
+#endif
+
+#if %SPEEDTREE_BILLBOARD
+    #if !%_RT_ALPHATEST || !%LEAVES
+        float3 worldTangentN = mul((const float3x3)vertPassPos.InstMatrix, vertPassPos.ObjToTangentSpace[2]);
+    #endif
+    SpeedTreeRemoveBillboardFace(worldTangentN.xyz, vertPassPos.ObjToTangentSpace[2].z > 0.5, OUT.HPosition);
+#endif
+
+  return OUT;
+}
+
+pixout_zprepass Common_ZPrepassPS(vert2fragZPrepass IN)
+{
+    pixout_zprepass OUT = (pixout_zprepass) 0;
+
+#if %_RT_ALPHATEST
+    half fDiffuseAlpha = GetTexture2D(diffuseMapSampler, IN.baseTC.xy).a;
+    clip(fDiffuseAlpha - IN.baseTC.w);
+#endif
+
+#if %FX_DISSOLVE
+    ClipDissolvedFrags(IN.baseTC.xy);		  	 
+#endif	
+	
+    return OUT;
+}
+
+technique ZPrepass
+{
+	pass p0
+	{
+		VertexShader = Common_ZPrepassVS() ZVS;
+		PixelShader = Common_ZPrepassPS() ZPS;
+
+		ZEnable = true;
+		ZWriteEnable = true; 
+		CullMode = Back;
+
+#if %GRASS || %LEAVES
+		CullMode = None;
+#endif
+	}
+}
