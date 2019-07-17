@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Generic" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>C:\Amazon\Lumberyard\git\dev\hope\Sounds\wwise_project\</ProjectRoot>
+		<SourceFilesRoot>C:\Amazon\Lumberyard\git\dev\hope\Sounds\wwise_project\.cache\Generic\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Amazon\Lumberyard\git\dev\hope\Sounds\wwise\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Amazon\Lumberyard\git\dev\hope\Sounds\wwise_project\GeneratedSoundBanks\Generic</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2643612632" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Content</ObjectPath>
+			<ShortName>Content</ShortName>
+			<Path>Content.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4280413250" Name="get_focus" ObjectPath="\Events\Default Work Unit\Default\get_focus"/>
+				<Event Id="3350149075" Name="lose_focus" ObjectPath="\Events\Default Work Unit\Default\lose_focus"/>
+				<Event Id="1739713018" Name="mute_all" ObjectPath="\Events\Default Work Unit\Default\mute_all"/>
+				<Event Id="2355317632" Name="Play_ambience_Cave_high_stereo" ObjectPath="\Events\Default Work Unit\Play_ambience_Cave_high_stereo"/>
+				<Event Id="673597623" Name="Play_ambience_river_gentle_mono" ObjectPath="\Events\Default Work Unit\Play_ambience_river_gentle_mono"/>
+				<Event Id="1014780333" Name="Play_ambience_river_low_stereo" ObjectPath="\Events\Default Work Unit\Play_ambience_river_low_stereo"/>
+				<Event Id="3907526083" Name="Play_ambience_waterfall_med_close_mono" ObjectPath="\Events\Default Work Unit\Play_ambience_waterfall_med_close_mono"/>
+				<Event Id="1586290029" Name="Play_ambience_waterfall_sml_close_mono" ObjectPath="\Events\Default Work Unit\Play_ambience_waterfall_sml_close_mono"/>
+				<Event Id="3622677598" Name="Play_AMZ_SFX_Amb_WaterCave_01" ObjectPath="\Events\Default Work Unit\Play_AMZ_SFX_Amb_WaterCave_01"/>
+				<Event Id="3857112611" Name="Play_button01" ObjectPath="\Events\Default Work Unit\Play_button01"/>
+				<Event Id="1074262550" Name="Play_collect_item_07" ObjectPath="\Events\Default Work Unit\Play_collect_item_07"/>
+				<Event Id="348820993" Name="Play_ground_hit" ObjectPath="\Events\Default Work Unit\Play_ground_hit"/>
+				<Event Id="1955994027" Name="Play_ground_hit02" ObjectPath="\Events\Default Work Unit\Play_ground_hit02"/>
+				<Event Id="256703654" Name="Play_HopeBackgroundMusic1" ObjectPath="\Events\Default Work Unit\Play_HopeBackgroundMusic1"/>
+				<Event Id="3689126666" Name="Play_jump" ObjectPath="\Events\Default Work Unit\Play_jump"/>
+				<Event Id="2745355359" Name="Play_light_in_dark_spell_04" ObjectPath="\Events\Default Work Unit\Play_light_in_dark_spell_04"/>
+				<Event Id="3244560832" Name="Play_marimba_high_c" ObjectPath="\Events\Default Work Unit\Play_marimba_high_c"/>
+				<Event Id="3244560838" Name="Play_marimba_high_e" ObjectPath="\Events\Default Work Unit\Play_marimba_high_e"/>
+				<Event Id="2368778887" Name="Play_marimba_low_b_flat" ObjectPath="\Events\Default Work Unit\Play_marimba_low_b_flat"/>
+				<Event Id="999743058" Name="Play_marimba_low_c" ObjectPath="\Events\Default Work Unit\Play_marimba_low_c"/>
+				<Event Id="999743062" Name="Play_marimba_low_g" ObjectPath="\Events\Default Work Unit\Play_marimba_low_g"/>
+				<Event Id="1172822406" Name="Play_shimmer_sparkle_loop_02" ObjectPath="\Events\Default Work Unit\Play_shimmer_sparkle_loop_02"/>
+				<Event Id="2683288441" Name="Play_ui_menu_button_click_24" ObjectPath="\Events\Default Work Unit\Play_ui_menu_button_click_24"/>
+				<Event Id="2699172601" Name="Play_ui_menu_popup_01" ObjectPath="\Events\Default Work Unit\Play_ui_menu_popup_01"/>
+				<Event Id="3683499780" Name="Stop_AMZ_SFX_Amb_WaterCave_01" ObjectPath="\Events\Default Work Unit\Stop_AMZ_SFX_Amb_WaterCave_01"/>
+				<Event Id="2327220660" Name="Stop_HopeBackgroundMusic1" ObjectPath="\Events\Default Work Unit\Stop_HopeBackgroundMusic1"/>
+				<Event Id="1327375084" Name="Stop_shimmer_sparkle_loop_02" ObjectPath="\Events\Default Work Unit\Stop_shimmer_sparkle_loop_02"/>
+				<Event Id="4003578643" Name="unmute_all" ObjectPath="\Events\Default Work Unit\Default\unmute_all"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="11414553" Language="SFX">
+					<ShortName>ambience_waterfall_med_close_mono.wav</ShortName>
+					<Path>SFX\ambience_waterfall_med_close_mono_91B2A2BD.wem</Path>
+				</File>
+				<File Id="106912477" Language="SFX">
+					<ShortName>HopeAudio\marimba_high_c.wav</ShortName>
+					<Path>SFX\HopeAudio\marimba_high_c_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="129951703" Language="SFX">
+					<ShortName>humble\ui_menu_popup_01.wav</ShortName>
+					<Path>SFX\humble\ui_menu_popup_01_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="156204363" Language="SFX">
+					<ShortName>ambience_Cave_high_stereo.wav</ShortName>
+					<Path>SFX\ambience_Cave_high_stereo_91B2A2BD.wem</Path>
+				</File>
+				<File Id="163427150" Language="SFX">
+					<ShortName>HopeAudio\marimba_low_g.wav</ShortName>
+					<Path>SFX\HopeAudio\marimba_low_g_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="166306262" Language="SFX">
+					<ShortName>humble\ui_menu_button_click_24.wav</ShortName>
+					<Path>SFX\humble\ui_menu_button_click_24_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="362475491" Language="SFX">
+					<ShortName>HopeAudio\jump.wav</ShortName>
+					<Path>SFX\HopeAudio\jump_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="373419384" Language="SFX">
+					<ShortName>HopeAudio\ground_hit.wav</ShortName>
+					<Path>SFX\HopeAudio\ground_hit_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="393007118" Language="SFX">
+					<ShortName>HopeAudio\marimba_low_b_flat.wav</ShortName>
+					<Path>SFX\HopeAudio\marimba_low_b_flat_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="433384495" Language="SFX">
+					<ShortName>AMZ_SFX_Amb_WaterCave_01.wav</ShortName>
+					<Path>SFX\AMZ_SFX_Amb_WaterCave_01_91B2A2BD.wem</Path>
+				</File>
+				<File Id="582416963" Language="SFX">
+					<ShortName>HopeAudio\marimba_low_c.wav</ShortName>
+					<Path>SFX\HopeAudio\marimba_low_c_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="660685219" Language="SFX">
+					<ShortName>HopeAudio\marimba_high_e.wav</ShortName>
+					<Path>SFX\HopeAudio\marimba_high_e_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="728920807" Language="SFX">
+					<ShortName>HopeAudio\button01.wav</ShortName>
+					<Path>SFX\HopeAudio\button01_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="753987741" Language="SFX">
+					<ShortName>ambience_river_gentle_mono.wav</ShortName>
+					<Path>SFX\ambience_river_gentle_mono_91B2A2BD.wem</Path>
+				</File>
+				<File Id="794784141" Language="SFX">
+					<ShortName>ambience_river_low_stereo.wav</ShortName>
+					<Path>SFX\ambience_river_low_stereo_91B2A2BD.wem</Path>
+				</File>
+				<File Id="857554657" Language="SFX">
+					<ShortName>humble\shimmer_sparkle_loop_02.wav</ShortName>
+					<Path>SFX\humble\shimmer_sparkle_loop_02_91B2A2BD.wem</Path>
+				</File>
+				<File Id="928158241" Language="SFX">
+					<ShortName>HopeAudio\ground_hit02.wav</ShortName>
+					<Path>SFX\HopeAudio\ground_hit02_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="936217624" Language="SFX">
+					<ShortName>spotfx_windthrutrees_sfx1.wav</ShortName>
+					<Path>SFX\spotfx_windthrutrees_sfx1_91B2A2BD.wem</Path>
+				</File>
+				<File Id="936521007" Language="SFX">
+					<ShortName>humble\collect_item_07.wav</ShortName>
+					<Path>SFX\humble\collect_item_07_4F2DCF8F.wem</Path>
+				</File>
+				<File Id="986720204" Language="SFX">
+					<ShortName>ambience_waterfall_sml_close_mono.wav</ShortName>
+					<Path>SFX\ambience_waterfall_sml_close_mono_91B2A2BD.wem</Path>
+				</File>
+				<File Id="998925506" Language="SFX">
+					<ShortName>HopeAudio\HopeBackgroundMusic1.wav</ShortName>
+					<Path>SFX\HopeAudio\HopeBackgroundMusic1_91B2A2BD.wem</Path>
+				</File>
+				<File Id="1021374352" Language="SFX">
+					<ShortName>humble\light_in_dark_spell_04.wav</ShortName>
+					<Path>SFX\humble\light_in_dark_spell_04_4F2DCF8F.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

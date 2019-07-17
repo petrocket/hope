@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Project="Lumberyard_SamplesProject_Wwise_LTX_2018.1.2" Platform="Generic" BasePlatform="Windows">
+	<Plugins>
+		<Plugin Name="Wwise RoomVerb" ID="7733251" DLL="AkRoomVerb"/>
+		<Plugin Name="System" ID="11403271" DLL="DefaultSink"/>
+	</Plugins>
+</PluginInfo>
