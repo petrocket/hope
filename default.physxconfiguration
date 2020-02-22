@@ -14,7 +14,7 @@
 				<Class name="float" field="Radius" value="17.5000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
 			</Class>
 		</Class>
-		<Class name="WorldConfiguration" field="WorldConfiguration" version="4" type="{3C87DF50-AD02-4746-B19F-8B7453A86243}">
+		<Class name="WorldConfiguration" field="WorldConfiguration" version="5" type="{3C87DF50-AD02-4746-B19F-8B7453A86243}">
 			<Class name="Aabb" field="WorldBounds" type="{A54C2B36-D5B8-46A1-A529-4EBDBD2450E7}">
 				<Class name="Vector3" field="min" value="-1000.0000000 -1000.0000000 -1000.0000000" type="{8379EB7D-01FA-4538-B64B-A6543B4BE73D}"/>
 				<Class name="Vector3" field="max" value="1000.0000000 1000.0000000 1000.0000000" type="{8379EB7D-01FA-4538-B64B-A6543B4BE73D}"/>
@@ -141,10 +141,13 @@
 				</Class>
 			</Class>
 		</Class>
-		<Class name="EditorConfiguration" field="EditorConfiguration" version="1" type="{016890FC-F1EB-478B-822E-1A40977ECBBB}">
+		<Class name="EditorConfiguration" field="EditorConfiguration" version="2" type="{016890FC-F1EB-478B-822E-1A40977ECBBB}">
 			<Class name="float" field="COMDebugSize" value="0.1000000" type="{EA2C3E90-AFBE-44D4-A90D-FAAF79BAF93D}"/>
 			<Class name="Color" field="COMDebugColor" value="1.0000000 0.0000000 0.0000000 1.0000000" type="{7894072A-9050-4F0F-901B-34B1A0D29417}"/>
+			<Class name="int" field="GlobalColliderDebugDraw" value="2" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
+			<Class name="int" field="GlobalColliderDebugDrawColorMode" value="0" type="{72039442-EB38-4D42-A1AD-CB68F7E0EEF6}"/>
 		</Class>
+		<Class name="Asset" field="MaterialLibrary" value="id={3A055A3F-8CB7-5FEE-B437-EB365FACD0D4}:0,type={9E366D8C-33BB-4825-9A1F-FA3ADBE11D0F},hint={surfacetypemateriallibrary.physmaterial}" version="1" type="{77A19D40-8731-4D3C-9041-1B43047366A4}"/>
 	</Class>
 </ObjectStream>
 

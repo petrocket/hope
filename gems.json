@@ -26,6 +26,12 @@
             "_comment": "LyShine"
         },
         {
+            "Path": "Gems/HMDFramework",
+            "Uuid": "24a3427048184feba39ba2cf75d45c4c",
+            "Version": "0.1.0",
+            "_comment": "HMDFramework"
+        },
+        {
             "Path": "Gems/ToolKit",
             "Uuid": "2d96b1adfd044278bba7b1562bb62e1d",
             "Version": "0.1.0",
@@ -110,10 +116,22 @@
             "_comment": "SurfaceData"
         },
         {
+            "Path": "Gems/AudioEngineWwise",
+            "Uuid": "67a80e2ac865406c990f2715feb55f7f",
+            "Version": "0.1.0",
+            "_comment": "AudioEngineWwise"
+        },
+        {
             "Path": "Gems/UiBasics",
             "Uuid": "6bb61c9e547043f0afc5019d6d460b78",
             "Version": "0.1.0",
             "_comment": "UiBasics"
+        },
+        {
+            "Path": "Gems/AudioSystem",
+            "Uuid": "6f63f2b6d07f4b89b4b7c86ebee7feb8",
+            "Version": "0.1.0",
+            "_comment": "AudioSystem"
         },
         {
             "Path": "Gems/StartingPointMovement",
@@ -156,6 +174,12 @@
             "Uuid": "bab8807a1bc646b3909f3cc200ffeedf",
             "Version": "0.1.0",
             "_comment": "ImGui"
+        },
+        {
+            "Path": "Gems/Oculus",
+            "Uuid": "c32178b3c4e94fbead069bd92ff9b04a",
+            "Version": "1.0.0",
+            "_comment": "Oculus"
         },
         {
             "Path": "Gems/Water",
@@ -208,8 +232,7 @@
         {
             "Path": "hope/Gem",
             "Uuid": "ffd828da88a24c85aeb6d330a010135c",
-            "Version": "0.1.0",
-            "_comment": "hope"
+            "Version": "0.1.0"
         }
     ]
 }
